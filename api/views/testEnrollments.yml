@@ -1,0 +1,20 @@
+A Test EndPOINT to get all enrollment records
+---
+
+definitions:
+  Enrollment:
+    type: object
+    properties:
+      nanodegree_key:
+        type: String
+        items:
+          $ref: '#/definitions/Color'
+responses:
+  200:
+    description: A list of Enrollment
+    schema:
+      id: Enrollment
+      properties:
+        nanodegree_key:
+          type: string
+          description: The id of the udacity_degree

@@ -1,0 +1,32 @@
+{
+    "name": "Enrollment Micro-Service UDACITY",
+    "description": "enrollment microservice for Udacity",
+    "keywords": [
+        "flask",
+        "postgresql"
+    ],
+    "repository": "https://github.com/abdolrhman/Enrollment-Micro-Service.git",
+    "success_url": "/",
+    "scripts": {
+        "postdeploy": "make heroku_setup"
+    },
+    "env": {
+        "FLASK_ENV": {
+            "description": "environment variable that determines the flask configuration - namely where to get postgres db url",
+            "value": "prod"
+        }
+    },
+    "addons": [
+        {
+            "plan": "heroku-postgresql",
+            "options": {
+                "version": "9.5"
+            }
+        }
+    ],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}

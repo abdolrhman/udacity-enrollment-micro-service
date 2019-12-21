@@ -1,0 +1,18 @@
+An EndPOINT to enroll dummy_user with udacity course
+---
+parameters:
+    - name: body
+      in: body
+      required: true
+      schema:
+        id: Enrollment
+        required:
+          - nanodegree_key
+        properties:
+          nanodegree_key:
+            type: string
+            description: Nano Degree Key.
+            default: "NanoDegree123"
+responses:
+  200:
+    description: A list of Enrollment
