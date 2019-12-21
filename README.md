@@ -6,9 +6,17 @@ With A React App to show Udacity Courses and Enroll to this courses
 With A DUMMY USER
 
 
-## Goal
+## Swagger_Docs
+```
+localhost:5000/apidocs
+```
 
 
+## Docker_Usage
+- docker-compose up
+// this will launch the app and postgres instances
+
+- 
 
 ## Usage
 
@@ -60,6 +68,10 @@ $ make recreate_db
 - `api/core.py` - includes core functionality including error handlers and logger
 - `api/wsgi.py` - app reference for gunicorn
 - `tests/` - Folder holding tests
+
+--------------
+- `frontEnd` - React project 
+- `frontEnd/src/components` - List and ListCourse Component
 
 #### Others
 
