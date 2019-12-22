@@ -1,24 +1,36 @@
 # Flask React Udacity Assessment
 
-This is simple app for building out simple REST APIs. 
+This is simple react-flask app for building out simple REST API. 
 That consume udacity API for Courses 
 With A React App to show Udacity Courses and Enroll to this courses
 With A DUMMY USER
 
-
+--------------
 ## Swagger_Docs
 ```
 localhost:5000/apidocs
 ```
 
+# Back-End Setup
+## Using Docker
+```
+docker-compose up
+```
+- this will create and launch the app and postgres instances and create the database.
+- After that every thing should be ready for the back-end .
+- A POST Request API  ```http://127.0.1:5000/enrollment```
+- that takes ```nanodegree_key```
+and for ```udacity_user_key && status```
+are being injected manually in ```Enrollment Model``` in ```__init__``` method 
 
-## Docker_Usage
-- docker-compose up
-// this will launch the app and postgres instances
+```
+Postgres choosed as task mentioned for me as the for the simplicity of the task
+any db would work fine, i could go for SQLite as its a simple databasea that writes on a simple file
+for scalability and production its a differnt story
+```
 
-- 
 
-## Usage
+## Using Local Setup
 
 First start a postgres docker container and persist the data with a volume `flask-app-db`:
 
@@ -46,18 +58,23 @@ To exit the virtual environment:
 (venv) $ deactivate
 $
 ```
+--------------
 
-#### Easier setup
+# Front-End Setup
+- React has been choose over angular for 
+> 1. the task it self is simple and doenst require the whole structure "folders, patterns, libraries" of angular
+>as its gust a library not a framework, also angular has some performance issues in regarding of particular things for ex : parsing html ...
+>2. Isolated components are easier to maintain
 
-I've created a makefile to make this entire process easier but purposely provided verbose instructions there to show you what is necessary to start this application. To do so:
 ```
-$ make setup
+cd frontEnd
+npm install
+npm run start
 ```
-
-If you like to destroy your docker postgres database and start over, run:
-```
-$ make recreate_db
-```
+- this will launch react application mainly on port 3000
+- with showing all Udactiy courses only if the
+attribute “available” = true and “open_for_enrollment” = true.
+- Each course will have an enrollment button.
 
 ### Folder Structure
 
@@ -66,7 +83,6 @@ $ make recreate_db
 - `api/__init__.py` - What is initially ran when you start your application
 - `api/utils.py` - utility functions and classes -
 - `api/core.py` - includes core functionality including error handlers and logger
-- `api/wsgi.py` - app reference for gunicorn
 - `tests/` - Folder holding tests
 
 --------------
@@ -75,11 +91,13 @@ $ make recreate_db
 
 #### Others
 
-- `config.py` - Provides Configuration for the application. There are two configurations: one for development and one for production using Heroku.
+- `config.py` - Provides Configuration for the application. There are two configurations: one for development and one for production.
 - `manage.py` - Command line interface that allows you to perform common functions with a command
 - `requirements.txt` - A list of python package dependencies the application requires
 - `Dockerfile` - instructions for Docker to build the Flask app
 - `docker-compose.yml` - config to setup this Flask app and a Database
 - `migrations/` - Holds migration files – doesn't exist until you `python manage.py db init` if you decide to not use docker
+--------------
 
-#### made By Abdolrhman Soliman For Udacity Assessment
+
+>By Abdolrhman Soliman 4 Udacity Assessment
