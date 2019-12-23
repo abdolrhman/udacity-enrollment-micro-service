@@ -4,6 +4,19 @@ This is simple react-flask app for building out simple REST API.
 That consume udacity API for Courses 
 With A React App to show Udacity Courses and Enroll to this courses
 With A DUMMY USER
+--------------
+
+## Table of Contents
+
+- [Swagger_Docs](#Swagger_Docs)
+- [Install & Use](#install-and-use)
+    - [Back-End Setup](#Back-End Setup)
+        - [Using Docker](#Using Docker)
+        - [Using Local Setup](#Using Local Setup)
+    - [Front-End Setup](#Front-End Setup)
+
+- [Folder Structure](#Folder Structure)
+- [Others](#Others)
 
 --------------
 ## Swagger_Docs
@@ -11,8 +24,8 @@ With A DUMMY USER
 localhost:5000/apidocs
 ```
 
-# Back-End Setup
-## Using Docker
+## Back-End Setup
+### Using Docker
 ```
 docker-compose up
 ```
@@ -30,7 +43,7 @@ for scalability and production its a differnt story
 ```
 
 
-## Using Local Setup
+### Using Local Setup
 
 First start a postgres docker container and persist the data with a volume `flask-app-db`:
 
@@ -60,7 +73,7 @@ $
 ```
 --------------
 
-# Front-End Setup
+## Front-End Setup
 - React has been choose over angular for 
 > 1. the task it self is simple and doenst require the whole structure "folders, patterns, libraries" of angular
 >as its gust a library not a framework, also angular has some performance issues in regarding of particular things for ex : parsing html ...
