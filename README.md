@@ -10,12 +10,11 @@ With A DUMMY USER
 
 - [Swagger_Docs](#Swagger_Docs)
 - [Install & Use](#install-and-use)
-    - [Back-End Setup](#Back-End Setup)
-        - [Using Docker](#Using Docker)
-        - [Using Local Setup](#Using Local Setup)
-    - [Front-End Setup](#Front-End Setup)
-
-- [Folder Structure](#Folder Structure)
+    - [Back-End Setup](#Back-End-Setup)
+        - [Using Docker](#Using-Docker)
+        - [Using Local Setup](#Using-Local-Setup)
+    - [Front-End Setup](#Front-End-Setup)
+- [Folder Structure](#Folder-Structure)
 - [Others](#Others)
 
 --------------
